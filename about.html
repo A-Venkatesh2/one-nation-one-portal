@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | One Nation One Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with real-time clock -->
+  <section class="header bg-light border-bottom py-3">
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-between align-items-center">
+        <a href="index.html" class="d-flex align-items-center text-decoration-none">
+          <img src="./iconlion.jpeg" height="35" class="me-2">
+          <span class="fs-4">ONE NATION, ONE PORTAL</span>
+        </a>
+        <div class="d-flex align-items-center">
+          <ul class="nav nav-pills me-3">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="central.html" class="nav-link">Central</a></li>
+            <li class="nav-item"><a href="state.html" class="nav-link">States</a></li>
+            <li class="nav-item"><a href="union.html" class="nav-link">Union</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+          </ul>
+          <div class="text-muted small" id="datetime"></div>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">About One Nation One Portal</h2>
+    
+    <p>
+      "One Nation One Portal" is a unified web platform built to provide easy access to all major official government websites of India — covering Central, State, and Union Territory administrations.
+      This portal is part of an educational initiative to promote digital governance awareness and simplify access to government services.
+    </p>
+
+    <h4>Objectives</h4>
+    <ul>
+      <li>Centralized access to all government resources in one place.</li>
+      <li>Improve user experience for citizens and students seeking government portals.</li>
+      <li>Raise awareness of digital initiatives and online services.</li>
+      <li>Serve as an educational and reference project.</li>
+    </ul>
+
+    <h4>Key Features</h4>
+    <ul>
+      <li>Links to verified and official government portals.</li>
+      <li>Responsive design, mobile-friendly.</li>
+      <li>Real-time date and time display.</li>
+      <li>Simple, clean, and informative user interface.</li>
+    </ul>
+
+    <h4>Technologies Used</h4>
+    <ul>
+      <li>HTML5 & CSS3</li>
+      <li>Bootstrap 5 for responsive layout</li>
+      <li>JavaScript for real-time clock</li>
+    </ul>
+
+    <h4>Developed By</h4>
+    <p>
+      This project was created by Venkatesh A as part of an academic or personal learning project.
+    </p>
+
+    <h4>Disclaimer</h4>
+    <p>
+      This website is developed for educational and informational purposes only. It is not affiliated with or endorsed by any government authority. All links provided redirect to official government websites.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light py-3 border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+      <div class="text-muted small">
+        © 2025 One Nation One Portal. All rights reserved.
+      </div>
+      <div>
+        <button class="btn btn-secondary btn-sm me-2" onclick="history.back()">Back</button>
+        <a href="index.html" class="btn btn-primary btn-sm">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Real-Time Clock -->
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = {
+        weekday: 'short',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      };
+      document.getElementById('datetime').textContent = now.toLocaleString('en-IN', options);
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+
+</body>
+</html>

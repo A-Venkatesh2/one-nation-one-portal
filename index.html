@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Nation One Portal</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="header bg-light border-bottom py-3">
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-between align-items-center">
+        <a href="index.html" class="d-flex align-items-center text-decoration-none">
+          <img src="./iconlion.jpeg" height="35" class="me-2">
+          <span class="fs-4">ONE NATION, ONE PORTAL</span>
+        </a>
+        <div class="d-flex align-items-center">
+          <ul class="nav nav-pills me-3">
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="central.html" class="nav-link">Central</a></li>
+            <li class="nav-item"><a href="state.html" class="nav-link">States</a></li>
+            <li class="nav-item"><a href="union.html" class="nav-link">Union</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link" >About</a></li>
+          </ul>
+          <div class="text-muted small" id="datetime"></div>
+        </div>
+      </header>
+    </div>
+  </section>
+    <section class="hero">
+        <div class="container col-xxl-8 px-4 py-5"> 
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5"> 
+                <div class="col-10 col-sm-8 col-lg-6"> 
+                    <img src="india-state-map.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> 
+                </div> 
+                <div class="col-lg-6"> 
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">"Access Every Official Indian Website from One Place"</h1> 
+                    <p class="lead">One Nation, One Portal is a centralized web platform designed to give users easy access to all official Indian government websites — from both the central and state governments — in one place.</p> 
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start"> 
+                <a href="central.html" class="btn btn-primary btn-lg px-3 me-md-2" role="button">Central Government Portals</a>
+                <a href="state.html" class="btn btn-primary btn-lg px-3 me-md-2" role="button">State Government Portals</a>
+                <a href="union.html" class="btn btn-primary btn-lg px-3 me-md-2" role="button">Union Government Portals</a>
+
+             
+            </div> 
+        </div> 
+    </div>
+    </section>
+
+    <footer class="bg-light py-3 border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+      <div class="text-muted small">
+        © 2025 One Nation One Portal. All rights reserved.
+      </div>
+    </div>
+  </footer>
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    const options = {
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+    };
+    document.getElementById('datetime').textContent = now.toLocaleString('en-IN', options);
+  }
+
+  setInterval(updateDateTime, 1000); // Update every second
+  updateDateTime(); // Initial call
+</script>
+
+
+</body>
+</html>
